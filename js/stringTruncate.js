@@ -30,7 +30,7 @@ const initStringTruncate = (parentSelector, selectorString, selectorToggle) => {
     const maxStringLength = 84;
 
     const stringItem = parent.querySelector(selectorString);
-    if (!stringItem) return;
+    if (!stringItem || stringItem.hasAttribute('data-full-text')) return;
 
     // decide whether to truncate and set listener
     const fullText = stringItem.innerText;

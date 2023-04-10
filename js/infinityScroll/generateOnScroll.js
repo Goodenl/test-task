@@ -10,7 +10,7 @@ const debounce = (func, time = 500) => {
 };
 
 const scrollEndHandle = (templateSelector, listSelector) => {
-  const bottomOffset = 50;
+  const bottomOffset = 80;
   if (
     window.innerHeight + window.scrollY + bottomOffset >=
     document.body.offsetHeight

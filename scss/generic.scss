@@ -1,0 +1,95 @@
+@import '_vars';
+
+@import 'bootstrap/scss/mixins';
+
+// bootstrap changes
+.active-underline {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -1.3rem;
+    left: 0;
+    background-color: $orange;
+    width: 100%;
+    height: 2px;
+
+    @include media-breakpoint-up(md) {
+      bottom: -1.5rem;
+    }
+  }
+}
+
+.fs-7 {
+  font-size: 0.876rem;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.dropdown-toggle::after {
+  display: inline-block;
+  position: relative;
+  left: 0.2em;
+  top: 0.1em;
+  height: 2rem;
+  content: url('../images/dropdown-caret.svg') !important;
+  border: none !important;
+}
+
+@media (min-width: 1400px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    max-width: 1142px;
+  }
+
+  .dark .container-xxl,
+  .dark .container-xl,
+  .dark .container-lg,
+  .dark .container-md,
+  .dark .container-sm,
+  .dark .container {
+    max-width: 1142px !important;
+  }
+}
+
+// custom classes
+.p-gutter-outer {
+  @include media-breakpoint-up(md) {
+    margin-left: -12px;
+    width: calc(100% + 12px) !important;
+  }
+}
+
+.appearance-none {
+  appearance: none;
+}
+
+.btn-default {
+  border: none;
+  outline: none;
+}
+
+.border-borders {
+  border-color: $borders;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fw-md-normal {
+  @include media-breakpoint-up(md) {
+    font-weight: 400 !important;
+  }
+}
+
+.fit-cover {
+  object-fit: cover;
+}

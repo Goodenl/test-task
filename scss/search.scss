@@ -1,0 +1,25 @@
+// Example of a custom component
+@import '_vars';
+
+.search {
+  height: 40px;
+  background-color: $gray-1;
+
+  &__icon {
+    left: 12px;
+    top: 8px;
+  }
+
+  &__input {
+    padding-left: 44px;
+    background-color: inherit;
+
+    color: $secondary;
+
+    outline: none;
+
+    &::placeholder-shown {
+      display: none;
+    }
+  }
+}
